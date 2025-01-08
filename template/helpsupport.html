@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help and Support - Pet Care</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:lightslategray; /* Background color for the entire page */
+        }
+
+        .help-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightblue; /* Background color for the help sections */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .answer {
+            display: none;
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Help and Support</h1>
+    </header>
+
+    <div class="help-section">
+        <h2>Getting Started</h2>
+        <div class="question" onclick="toggleAnswer(this)">1. How do I create an account?</div>
+        <div class="answer">To create an account, go to our registration page and fill out the required information.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">2. How can I contact customer support?</div>
+        <div class="answer">You can reach our customer support team by email or phone. Visit the Contact Us page for details.</div>
+    </div>
+
+    <div class="help-section">
+        <h2>Account Management</h2>
+        <div class="question" onclick="toggleAnswer(this)">1. How do I change my password?</div>
+        <div class="answer">To change your password, log in to your account and go to the Password Settings page.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">2. What should I do if I forget my password?</div>
+        <div class="answer">If you forget your password, click the "Forgot Password" link on the login page to reset it.</div>
+    </div>
+
+    <!-- Add more help sections and entries as needed -->
+
+    <footer>
+        <p>&copy; 2024 TailTales</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

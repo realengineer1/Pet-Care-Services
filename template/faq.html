@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TailTales</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightpink /* Background color for the entire page */
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: lightgreen; /* Background color for the FAQ sections */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .answer {
+            display: none;
+            margin: 0;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="faq-section">
+        <h2>General Questions</h2>
+        <div class="question" onclick="toggleAnswer(this)">1. What are the benefits of regular pet check-ups?</div>
+        <div class="answer">Regular check-ups help detect health issues early, ensuring your pet's well-being.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">2. How often should I groom my pet?</div>
+        <div class="answer">Grooming frequency depends on the pet's breed and coat type, but generally, every 4-6 weeks is recommended.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">3. How can I choose the right pet food?</div>
+        <div class="answer">Select food based on your pet's age, size, and dietary needs. Consult your vet for guidance.</div>
+    </div>
+
+    <div class="faq-section">
+        <h2>Dog Care</h2>
+        <div class="question" onclick="toggleAnswer(this)">1. What's the best way to house train a puppy?</div>
+        <div class="answer">Consistency, positive reinforcement, and a regular potty schedule are key to successful house training.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">2. How can I socialize my dog?</div>
+        <div class="answer">Expose your dog to various people, pets, and environments during the critical socialization period.</div>
+
+        <div class="question" onclick="toggleAnswer(this)">3. What are some tips for leash training?</div>
+        <div class="answer">Start with short, positive walks and use treats to reward leash manners.</div>
+    </div>
+
+    <!-- Add more FAQ sections and entries as needed -->
+
+    <footer>
+        <p>&copy; 2024 TailTales</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
